@@ -22,6 +22,9 @@ from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from supabase import create_client, Client
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ---------- Config ----------
 GEOAPIFY_API_KEY = os.environ.get("GEOAPIFY_API_KEY", "")
